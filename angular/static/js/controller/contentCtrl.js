@@ -1,4 +1,31 @@
 angular.module('content',[])
-.controller('ContentCtrl',['$scope',function($scope){
+.controller('contentCtrl',['$scope',"$location","$state",function($scope,$location,$state){
     console.log($scope)
+    console.log($location)
+        $scope.id = $location.path().split('/')[1];
+        console.log($scope.id)
+        $scope.content=[{
+            id:0,
+            content:"11111"
+        },{
+            id:1,
+            content:"22222"
+        },{
+            id:2,
+            content:"3333"
+        },{
+            id:3,
+            content:"4444"
+        },{
+            id:4,
+            content:"5555"
+        },{
+            id:5,
+            content:"666"
+        }];
+        $scope.goDetail=function(){
+            console.log(111);
+            console.log($state)
+            $state.go("detail")
+        }
 }])

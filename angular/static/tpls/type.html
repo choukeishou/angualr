@@ -1,6 +1,4 @@
 <div>
   <a>类别</a>
-  <a ui-sref="home({type:{{type.id}}})" ng-repeat="type in types">
-      {{type.name}}
-  </a>
+ <p  ng-repeat="type in types"><a ui-sref="home({type:{{type.id}}})">{{type.name}}</a></p>
 </div>

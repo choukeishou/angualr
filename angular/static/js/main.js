@@ -1,4 +1,4 @@
-angular.module("main",["ui.roter","login","type"]).config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+angular.module("app",["ui.router","login","type","content","detail"]).config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.when("","/login");
     $stateProvider.state("login",{
         url:"/login",
@@ -21,6 +21,14 @@ angular.module("main",["ui.roter","login","type"]).config(["$stateProvider","$ur
             'content@home':{
                 templateUrl:'tpls/content.html',
                 controller:'contentCtrl'
+            }
+        }
+    }).state("detail",{
+        url:"/detail",
+        views:{
+            "":{
+                templateUrl:"tpls/detail.html",
+                controller:"detailCtrl"
             }
         }
     })

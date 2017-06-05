@@ -1,3 +1,5 @@
 <div>
-    主体内容
+    主体内容区域
+    <p ng-repeat="con in content" ng-bind="con.content" ng-if="con.id==id"></p>
+    <div ng-click="goDetail()" style="background-color:red;">点击跳转到详情页面</div>
 </div>

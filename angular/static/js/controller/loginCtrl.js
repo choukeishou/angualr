@@ -1,9 +1,9 @@
 angular.module("login",[])
-.controller("loginCtrl",["$state","$timeout",function($state,$timeout){
+.controller("loginCtrl",["$scope","$state","$timeout",function($scope,$state,$timeout){
     $scope.items=[1,2,3,4]
     $scope.goHome=function(){
-        $timeout(function(){
-            $state.go("/home");
-        },5000);
+        console.log(11)
+            // $state.go("#!/home");
+            window.location.href="#!/0"
     }
 }])
